@@ -1,0 +1,68 @@
+{
+  "name": "Selectize",
+  "description": "Selectize",
+  "version": "1.5.1",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "storage",
+    "notifications",
+    "<all_urls>",
+    "contextMenus",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "browser_action": {
+    "default_title": "Selectize",
+    "default_popup": "src/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "src/notes.html",
+    "src/video.html",
+    "src/bookmark.html",
+    "fa/css/all.min.css",
+    "fa/css/fontawesome.min.css",
+    "fa/css/regular.min.css",
+    "img/bd.png",
+    "img/angle-double-left-solid.svg",
+    "img/angle-double-right-solid.svg",
+    "img/star-solid.svg",
+    "img/copy-solid.svg",
+    "img/heart-solid.svg",
+    "img/snowflake-solid.svg",
+    "img/angle-double-left-solid-white.svg",
+    "img/angle-double-right-solid-white.svg",
+    "img/star-solid-white.svg",
+    "img/copy-solid-white.svg",
+    "img/heart-solid-white.svg",
+    "img/snowflake-solid-white.svg",
+    "img/add-file-1.svg"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/jquery.min.js",
+        "js/jquery.dataTables.min.js",
+        "js/dataTables.select.min.js",
+        "js/cn.js"
+      ],
+      "css": [
+        "css/content_script.css",
+        "fa/css/all.min.css",
+        "fa/css/fontawesome.min.css",
+        "fa/css/regular.min.css"
+      ],
+      "all_frames": false
+    }
+  ],
+  "incognito":"split",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy5Hjn5BDYtngVzsXekpvAPQW7SFpKIM2z/xV4py5XTfOAT5Ln/rEnYfwGNrw6WEZAPo2OsFnSg1ZOpCe7E5NmQVyqbKul9sDwu7wtQ288W8nu2/OoeDfTrfUPSKswTPpA8DbFBLAyYsqLABvg8hpfWRBlKywGSNOAfciJCH13tyUDCMeDWrAbrpdjZDOjTXu7AXLEc5qrAPyLlDisK50THyyCU6BbLttJmIFo3Ymen8UrKkpKsp0ewr5AEDEm4HGgM6/rnAc2Ivpdnt3H3jKv/Ttge9/AkBFvPG0eEgilzkLfydgs1TZp/n4W5Az87LqNH9gN6tJz4z6h+ez3hbmiwIDAQAB"
+}
